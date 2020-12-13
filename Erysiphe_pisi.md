@@ -22,7 +22,6 @@ export PATH=/programs/snap:$PATH
 export AUGUSTUS_CONFIG_PATH=/workdir/config
 export ZOE=/programs/snap/Zoe
 export LD_LIBRARY_PATH=/programs/boost_1_62_0/lib
-export PATH=/workdir/nv232/RepeatMasker:/programs/snap:$PATH
 which maker          #The step is to confirm that you are using maker on /workdir
 mkdir /workdir/tmp
 maker -CTL

@@ -39,7 +39,7 @@ TMP=/workdir/tmp
 ```
 
 ```ShellSession
-/usr/local/mpich/bin/mpiexec -n 40 maker --fix_nucleotides -base epi_rnd1 -qq >& log &
+/usr/local/mpich/bin/mpiexec -n 40 maker -fix_nucleotides -base epi_rnd1 -qq >& log &
 ```
  
 #### Second MAKER annotation run - SNAP training
@@ -72,7 +72,7 @@ est2genome=0 # do not do EST evidence based gene model
 ```
 
 ```ShellSession
-/usr/local/mpich/bin/mpiexec -n 40 maker --fix_nucleotides -base epi_rnd2 >& log2 &
+/usr/local/mpich/bin/mpiexec -n 40 maker -fix_nucleotides -base epi_rnd2 >& log2 &
 ```
 
 #### Third MAKER annotation run - SNAP training
@@ -105,7 +105,7 @@ est2genome=0 # do not do EST evidence based gene model
 ```
 
 ```ShellSession
-/usr/local/mpich/bin/mpiexec -n 40 maker --fix_nucleotides -base epi_rnd3 >& log3 &
+/usr/local/mpich/bin/mpiexec -n 40 maker -fix_nucleotides -base epi_rnd3 >& log3 &
 ```
 
 ```

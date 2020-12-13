@@ -11,6 +11,8 @@ The output file "epi-families.fa" is to be supplied to "rmlib=" in the MAKER con
 
 #### First `MAKER` annotation run
 
+Set environment to run MAKER and create MAKER control files.
+
 ```ShellSession
 cd /workdir
 cp -r /programs/Augustus-3.3.2/config/ /workdir/

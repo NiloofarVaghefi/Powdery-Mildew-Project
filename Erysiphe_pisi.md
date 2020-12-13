@@ -3,10 +3,11 @@
 #### Build a custom repeat database using `RepeatModeler`
 
 ```ShellSession
-export PATH=/programs/RepeatModeler-2.0:$PATH
+export PATH=/programs/RepeatModeler-2.0.1:$PATH
 BuildDatabase -name epi Erysiphe_pisi.genome.fa
 RepeatModeler -pa 40 -database epi -LTRStruct >& repeatmodeler.log
 ```
+The output file "epi-families.fa" is to be supplied to "rmlib=" in the MAKER control file.
 
 #### First `MAKER` annotation run
 

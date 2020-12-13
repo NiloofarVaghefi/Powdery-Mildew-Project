@@ -17,7 +17,6 @@ Set environment to run MAKER and create MAKER control files.
 cd /workdir
 cp -r /programs/Augustus-3.3.2/config/ /workdir/
 export PATH=/workdir/maker/bin:$PATH
-screen
 export PATH=/programs/snap:$PATH
 export AUGUSTUS_CONFIG_PATH=/workdir/config
 export ZOE=/programs/snap/Zoe
@@ -41,6 +40,7 @@ TMP=/workdir/tmp
 ```
 
 ```ShellSession
+screen
 /usr/local/mpich/bin/mpiexec -n 40 maker -fix_nucleotides -base epi_rnd1 -qq >& log &
 ```
  

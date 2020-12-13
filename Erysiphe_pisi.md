@@ -8,7 +8,7 @@ BuildDatabase -name epi Erysiphe_pisi.genome.fa
 RepeatModeler -pa 40 -database epi -LTRStruct >& repeatmodeler.log
 ```
 
-#### First MAKER annotation run
+#### First `MAKER` annotation run
 
 ```ShellSession
 cd /workdir
@@ -42,7 +42,7 @@ TMP=/workdir/tmp
 /usr/local/mpich/bin/mpiexec -n 40 maker -fix_nucleotides -base epi_rnd1 -qq >& log &
 ```
  
-#### Second MAKER annotation run - SNAP training
+#### `SNAP` training round 1 and second `MAKER` annotation run
 
 ```
 mkdir snap1
@@ -75,7 +75,7 @@ est2genome=0 # do not do EST evidence based gene model
 /usr/local/mpich/bin/mpiexec -n 40 maker -fix_nucleotides -base epi_rnd2 >& log2 &
 ```
 
-#### Third MAKER annotation run - SNAP training
+#### `SNAP` training round 2 and third `MAKER` annotation run 
 
 ```ShellSession
 mkdir snap2
@@ -108,7 +108,9 @@ est2genome=0 # do not do EST evidence based gene model
 /usr/local/mpich/bin/mpiexec -n 40 maker -fix_nucleotides -base epi_rnd3 >& log3 &
 ```
 
-```
+
+#### `MAKER` outputs
+```ShellSession
 gff3_merge -n -d epi_rnd3.maker.output/epi_rnd3_master_datastore_index.log>epi_rnd3.noseq.gff
 fasta_merge -d epi_rnd3.maker.output/epi_rnd3_master_datastore_index.log
 ```

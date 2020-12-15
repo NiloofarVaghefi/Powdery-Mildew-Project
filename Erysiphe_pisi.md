@@ -113,6 +113,6 @@ est2genome=0 # do not do EST evidence based gene model
 
 #### `MAKER` outputs
 ```ShellSession
-gff3_merge -n -d epi_rnd3.maker.output/epi_rnd3_master_datastore_index.log>epi_rnd3.noseq.gff
+gff3_merge -d epi_rnd3.maker.output/epi_rnd3_master_datastore_index.log>epi_rnd3.gff
 fasta_merge -d epi_rnd3.maker.output/epi_rnd3_master_datastore_index.log
 ```

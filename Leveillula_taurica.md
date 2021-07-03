@@ -87,6 +87,7 @@ est= #remove
 model_org= #remove
 rmlib = #remove
 repeat_protein= #Remove
+augustus_species= #Remove
 snaphmm=/workdir/nv232/Lta1.hmm
 est2genome=0
 pred_stats=1 #report AED stats

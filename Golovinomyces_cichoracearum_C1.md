@@ -23,6 +23,8 @@ export LD_LIBRARY_PATH=/usr/local/gcc-7.3.0/lib64:/usr/local/gcc-7.3.0/lib
 --CPU 40 --output ./trinity_out >& trinity.log &
 ```
 
+The output file "Trinity.fasta" is to be supplied to "est=" in the MAKER control file.
+
 #### Build a custom repeat database using `RepeatModeler`
 
 ```ShellSession

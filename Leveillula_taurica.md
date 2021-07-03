@@ -127,6 +127,6 @@ snaphmm=Lta2.hmm
 
 #### `MAKER` outputs
 ```ShellSession
-gff3_merge -d Lta_rnd3.maker.output/Lta_rnd3_master_datastore_index.log>epi_rnd3.gff
+gff3_merge -d Lta_rnd3.maker.output/Lta_rnd3_master_datastore_index.log>Lta_rnd3.gff
 fasta_merge -d Lta_rnd3.maker.output/Lta_rnd3_master_datastore_index.log
 ```

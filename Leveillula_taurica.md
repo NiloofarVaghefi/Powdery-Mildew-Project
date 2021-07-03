@@ -22,7 +22,7 @@ screen
 $TRINITY_HOME/Trinity --seqType fq --left C1_HWVJKAFXY_TTGCCTAG-TAAGTGGT_R1_BBduk.fastq.gz,C2_HWVJKAFXY_CCATTCGA-CGGACAAC_R1_BBduk.fastq.gz --right C1_HWVJKAFXY_TTGCCTAG-TAAGTGGT_R2_BBduk.fastq.gz,C2_HWVJKAFXY_CCATTCGA-CGGACAAC_R2_BBduk.fastq.gz --SS_lib_type RF --max_memory 160G --no_salmon --trimmomatic --CPU 40 --output ./Lta_trinity_out >& trinity.log &
 ```
  
- The output file "Trinity.fasta" is to be supplied to "rmlib=" in the MAKER control file.
+ The output file "Trinity.fasta" is to be supplied to "est=" in the MAKER control file.
  
 #### First `MAKER` annotation run
 

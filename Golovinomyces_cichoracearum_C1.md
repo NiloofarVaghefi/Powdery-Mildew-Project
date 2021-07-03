@@ -99,11 +99,12 @@ snaphmm=snap_GciC1_1.hmm
 augustus_species= #not running AUGUSTUS again
 est2genome=0 # do not do EST evidence based gene model
 min_contig=500
+keep_preds=1
 TMP=/workdir/tmp
 ```
 
 ```ShellSession
-/usr/local/mpich/bin/mpiexec -n 64 maker -base GciC1_rnd2 -fix_nucleotides -qq
+/usr/local/mpich/bin/mpiexec -n 64 maker -base GciC1_rnd2 -fix_nucleotides -qq >& log2 &
 ```
 
 #### `SNAP` training round 2 and third `MAKER` annotation run 
@@ -130,7 +131,7 @@ snaphmm=snap_GciC1_2.hmm
 ```
 
 ```ShellSession
-/usr/local/mpich/bin/mpiexec -n 64 maker -base GciC1_rnd3 -fix_nucleotides -qq
+/usr/local/mpich/bin/mpiexec -n 64 maker -base GciC1_rnd3 -fix_nucleotides -qq >& log3 &
 ```
 
 

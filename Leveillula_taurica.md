@@ -10,7 +10,7 @@ RepeatModeler -pa 40 -database Lta -LTRStruct >& repeatmodeler.log
 The output file "Lta-families.fa" is to be supplied to "rmlib=" in the MAKER control file.
 
 
-#### 'Trinity' transcriptome assembly
+#### `Trinity` transcriptome assembly
 
 ```ShellSession
 /programs/bbmap-38.86/bbduk.sh in1=C1_HWVJKAFXY_TTGCCTAG-TAAGTGGT_R1.fastq.gz in2=C1_HWVJKAFXY_TTGCCTAG-TAAGTGGT_R2.fastq.gz out1=C1_HWVJKAFXY_TTGCCTAG-TAAGTGGT_R1_BBduk.fastq.gz out2=C1_HWVJKAFXY_TTGCCTAG-TAAGTGGT_R2_BBduk.fastq.gz ref=UniVec_Core ktrim=r k=21 mink=11 hdist=2 tpe tbo

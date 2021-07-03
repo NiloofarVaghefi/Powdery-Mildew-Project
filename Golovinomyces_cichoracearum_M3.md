@@ -23,6 +23,9 @@ export LD_LIBRARY_PATH=/usr/local/gcc-7.3.0/lib64:/usr/local/gcc-7.3.0/lib
 --CPU 40 --output ./trinity_out >& trinity.log &
 ```
 
+The output file "Trinity.fasta" is to be supplied to "est=" in the MAKER control file.
+
+
 #### Build a custom repeat database using `RepeatModeler`
 
 ```ShellSession
@@ -99,11 +102,12 @@ snaphmm=snap_GciM3_1.hmm
 augustus_species= #not running AUGUSTUS again
 est2genome=0 # do not do EST evidence based gene model
 min_contig=500
+keep_preds=1
 TMP=/workdir/tmp
 ```
 
 ```ShellSession
-/usr/local/mpich/bin/mpiexec -n 64 maker -base GciM3_rnd2 -fix_nucleotides -qq
+/usr/local/mpich/bin/mpiexec -n 64 maker -base GciM3_rnd2 -fix_nucleotides -qq >& log2 &
 ```
 
 #### `SNAP` training round 2 and third `MAKER` annotation run 
@@ -130,7 +134,7 @@ snaphmm=snap_GciM3_2.hmm
 ```
 
 ```ShellSession
-/usr/local/mpich/bin/mpiexec -n 64 maker -base GciM3_rnd3 -fix_nucleotides -qq
+/usr/local/mpich/bin/mpiexec -n 64 maker -base GciM3_rnd3 -fix_nucleotides -qq >& log3 &
 ```
 
 

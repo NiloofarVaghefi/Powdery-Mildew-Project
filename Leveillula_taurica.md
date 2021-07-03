@@ -14,7 +14,7 @@ The output file "Lta-families.fa" is to be supplied to "rmlib=" in the MAKER con
 
 ```ShellSession
 /programs/bbmap-38.86/bbduk.sh in1=C1_HWVJKAFXY_TTGCCTAG-TAAGTGGT_R1.fastq.gz in2=C1_HWVJKAFXY_TTGCCTAG-TAAGTGGT_R2.fastq.gz out1=C1_HWVJKAFXY_TTGCCTAG-TAAGTGGT_R1_BBduk.fastq.gz out2=C1_HWVJKAFXY_TTGCCTAG-TAAGTGGT_R2_BBduk.fastq.gz ref=UniVec_Core ktrim=r k=21 mink=11 hdist=2 tpe tbo
-/programs/bbmap-38.86/current/ jgi.BBDuk in1=C2_HWVJKAFXY_CCATTCGA-CGGACAAC_R1.fastq.gz in2=C2_HWVJKAFXY_CCATTCGA-CGGACAAC_R2.fastq.gz out1=C2_HWVJKAFXY_CCATTCGA-CGGACAAC_R1_BBduk.fastq.gz out2=C2_HWVJKAFXY_CCATTCGA-CGGACAAC_R2_BBduk.fastq.gz ref=UniVec_Core ktrim=r k=21 mink=11 hdist=2 tpe tbo 
+/programs/bbmap-38.86/bbduk.sh in1=C2_HWVJKAFXY_CCATTCGA-CGGACAAC_R1.fastq.gz in2=C2_HWVJKAFXY_CCATTCGA-CGGACAAC_R2.fastq.gz out1=C2_HWVJKAFXY_CCATTCGA-CGGACAAC_R1_BBduk.fastq.gz out2=C2_HWVJKAFXY_CCATTCGA-CGGACAAC_R2_BBduk.fastq.gz ref=UniVec_Core ktrim=r k=21 mink=11 hdist=2 tpe tbo 
 export PATH=/programs/jellyfish-2.2.7/bin:/programs/salmon-1.0.0/bin:$PATH
 export TRINITY_HOME=/programs/trinityrnaseq-v2.10.0/
 export LD_LIBRARY_PATH=/usr/local/gcc-7.3.0/lib64:/usr/local/gcc-7.3.0/lib

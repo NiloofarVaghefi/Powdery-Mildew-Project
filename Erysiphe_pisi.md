@@ -70,6 +70,7 @@ est= # remove est file, do not run EST blast again
 model_org= #remove repeat mask model, so not running RepeatModeler again
 rmlib= # not running repeat masking again
 repeat_protein= #Remove
+augustus_species= #Remove
 snaphmm=snap_epi.hmm
 est2genome=0 # do not do EST evidence based gene model
 keep_preds=1 # keep genes even without evidence support, set to 0 if no

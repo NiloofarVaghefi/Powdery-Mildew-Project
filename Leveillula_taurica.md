@@ -55,6 +55,7 @@ rmlib=/workdir/nv232/Lta-families.fa #organism specific repeat library output fr
 softmask=1
 augustus_species=Bgh_dh14_v4 #Augustus gene prediction species model prduced by @StefanKusch
 est2genome=1 #infer gene predictions directly from EST
+min_contig=500
 TMP=/workdir/tmp
 ```
 

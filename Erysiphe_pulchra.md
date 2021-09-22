@@ -2,7 +2,7 @@
 
 #### Build a transcriptome assembly
 
-All SRR numbers for Erysiphe pulchra RNA data available on NCBI were written into a file called SRR_Acc_List.txt, one number per line.
+All SRR numbers for Erysiphe pulchra RNA data available on NCBI were written into five files: SRR_Acc_List1_Epu.txt to SRR_Acc_List5_Epu.txt, one number per line.
 
 File get_SRR_data.sh was created to include
 

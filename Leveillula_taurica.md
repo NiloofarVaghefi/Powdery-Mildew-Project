@@ -1,5 +1,23 @@
 ## MAKER annotaion for Leveillula taurica genome 
 
+#### `Trinity` transcriptome assembly
+
+```ShellSession
+source /programs/HISAT2/hisat2.sh
+hisat2-build -f Leveillula_taurica_v1.fa Lta_index
+hisat2 -p 40 -q -x Lta_index -1 C1_HWVJKAFXY_TTGCCTAG-TAAGTGGT_R1_BBduk.fastq.gz,C2_HWVJKAFXY_CCATTCGA-CGGACAAC_R1_BBduk.fastq.gz -2 C1_HWVJKAFXY_TTGCCTAG-TAAGTGGT_R2_BBduk.fastq.gz,C2_HWVJKAFXY_CCATTCGA-CGGACAAC_R2_BBduk.fastq.gz --al-conc Lta_alignedRNA_1 -S Lta_alignment1
+```
+
+```ShellSession
+export PATH=/programs/jellyfish-2.2.7/bin:/programs/salmon-1.0.0/bin:$PATH
+export TRINITY_HOME=/programs/trinityrnaseq-v2.10.0/
+export LD_LIBRARY_PATH=/usr/local/gcc-7.3.0/lib64:/usr/local/gcc-7.3.0/lib
+screen
+$TRINITY_HOME/Trinity --seqType fq --left Lta_alignedRNA_1.1 --right Lta_alignedRNA_1.2 --SS_lib_type RF --max_memory 160G --no_salmon --trimmomatic --CPU 40 --output ./Lta_trinity_out >& trinity.log &
+```
+ 
+ The output file "Trinity.fasta" is to be supplied to "est=" in the MAKER control file.
+ 
 #### Build a custom repeat database using `RepeatModeler`
 
 ```ShellSession
@@ -10,18 +28,6 @@ RepeatModeler -pa 40 -database Lta -LTRStruct >& repeatmodeler.log
 The output file "Lta-families.fa" is to be supplied to "rmlib=" in the MAKER control file.
 
 
-#### `Trinity` transcriptome assembly
-
-```ShellSession
-export PATH=/programs/jellyfish-2.2.7/bin:/programs/salmon-1.0.0/bin:$PATH
-export TRINITY_HOME=/programs/trinityrnaseq-v2.10.0/
-export LD_LIBRARY_PATH=/usr/local/gcc-7.3.0/lib64:/usr/local/gcc-7.3.0/lib
-screen
-$TRINITY_HOME/Trinity --seqType fq --left C1_HWVJKAFXY_TTGCCTAG-TAAGTGGT_R1_BBduk.fastq.gz,C2_HWVJKAFXY_CCATTCGA-CGGACAAC_R1_BBduk.fastq.gz --right C1_HWVJKAFXY_TTGCCTAG-TAAGTGGT_R2_BBduk.fastq.gz,C2_HWVJKAFXY_CCATTCGA-CGGACAAC_R2_BBduk.fastq.gz --SS_lib_type RF --max_memory 160G --no_salmon --trimmomatic --CPU 40 --output ./Lta_trinity_out >& trinity.log &
-```
- 
- The output file "Trinity.fasta" is to be supplied to "est=" in the MAKER control file.
- 
 #### First `MAKER` annotation run
 
 Set environment to run MAKER and create MAKER control files.

@@ -9,4 +9,4 @@ Annotation of powdery mildew genomes
 - NCBI Blast+ [Website](https://www.ncbi.nlm.nih.gov/books/NBK279690/)
 - RepeatMasker [Website](http://www.repeatmasker.org)
 - Augustus [Publication](https://academic.oup.com/nar/article/33/suppl_2/W465/2505649) | [Manual](https://vcru.wisc.edu/simonlab/bioinformatics/programs/augustus/docs/tutorial2015/index.html)
-- Trinity [Website] (https://github.com/trinityrnaseq/trinityrnaseq/wiki)
+- Trinity [Website](https://github.com/trinityrnaseq/trinityrnaseq/wiki)

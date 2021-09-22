@@ -6,8 +6,10 @@ All SRR numbers for Bgtr RNA data available on NCBI were written into a file cal
 
 File get_SRR_data.sh was created to include
 
+```
    #!/usr/bin/bash
    fasterq-dump $1
+```
 
 Fasterq-dump will pull the data, one by one for all accession numbers in your list, and turn each into a fastq at the same time. By default ,it will create paired end files if available.
 

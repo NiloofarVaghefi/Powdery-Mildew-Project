@@ -2,7 +2,7 @@
 
 #### Build a transcriptome assembly
 
-All SRR numbers for Erysiphe necator RNA data available on NCBI were written into a file called SRR_list.txt, one number per line.
+All SRR numbers for Erysiphe necator RNA data available on NCBI were written into a file called Ene_SRR_list.txt, one number per line.
 
 File get_SRR_data.sh was created to include
 

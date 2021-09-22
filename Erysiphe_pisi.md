@@ -30,12 +30,14 @@ Edit maker_opts.ctl file
 
 ```
 genome=/workdir/nv232/Erysiphe_pisi.genome.fa
+organism_type=eukaryotic
 est=/workdir/nv232/Ep_GHEC01.1.fsa_nt #downloaded from NCBI TSA database
 model_org=simple #model organism for RepBase masking in RepeatMasker
 rmlib=/workdir/nv232/Epi-families.fa #organism specific repeat library output from RepeatModeler 
 softmask=1
 augustus_species=Bgh_dh14_v4 #Augustus gene prediction species model prduced by @StefanKusch
 est2genome=1 #infer gene predictions directly from EST
+min_contig=500
 TMP=/workdir/tmp
 ```
 
@@ -74,6 +76,7 @@ augustus_species= #Remove
 snaphmm=snap_epi.hmm
 est2genome=0 # do not do EST evidence based gene model
 keep_preds=1 # keep genes even without evidence support, set to 0 if no
+min_contig=500
 TMP=/workdir/tmp
 ```
 

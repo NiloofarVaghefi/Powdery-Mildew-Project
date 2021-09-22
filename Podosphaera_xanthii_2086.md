@@ -75,7 +75,7 @@ Edit maker_opts.ctl file
 ```
 genome=/workdir/nv232/Podosphaera_xanthii_2086.fna
 organism_type=eukaryotic
-est=/workdir/nv232/Trinity_Pxa20086.fasta #output from trinity
+est=/workdir/nv232/Trinity_Pxa2086.fasta #output from trinity
 model_org=simple #model organism for RepBase masking in RepeatMasker
 rmlib=/workdir/nv232/px2-families.fa #organism specific repeat library output from RepeatModeler 
 softmask=1

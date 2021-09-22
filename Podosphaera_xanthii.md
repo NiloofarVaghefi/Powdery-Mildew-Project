@@ -60,8 +60,6 @@ Set environment to run MAKER and create MAKER control files.
 ```ShellSession
 cd /workdir
 cp -r /programs/Augustus-3.3.2/config/ /workdir/
-cp -rH /programs/maker/ ./
-cp -rH /programs/RepeatMasker  ./
 export PATH=/workdir/$USER/maker/bin:/workdir/$USER/RepeatMasker:/programs/snap:$PATH
 export PATH=/workdir/maker/bin:$PATH
 export PATH=/programs/snap:$PATH

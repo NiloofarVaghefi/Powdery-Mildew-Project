@@ -7,7 +7,7 @@ fasterq-dump --split-files SRR8216439.1
 fasterq-dump --split-files SRR8216440.1
 fasterq-dump --split-files SRR8216441.1
 fasterq-dump --split-files SRR8858150.1
-
+fasterq-dump --split-files SRR8863763.1
 
 source /programs/HISAT2/hisat2.sh
 hisat2-build -f Podosphaera_xanthii_Wanju.fna PxaW_index
@@ -15,7 +15,7 @@ hisat2 -p 40 -q -x PxaW_index -1 SRR8216439.1_1.fastq -2 SRR8216439.1_2.fastq --
 hisat2 -p 40 -q -x PxaW_index -1 SRR8216440.1_1.fastq -2 SRR8216440.1_2.fastq --al-conc PxaW_alignedRNA_2 -S PxaW_alignment2
 hisat2 -p 40 -q -x PxaW_index -1 SRR8216441.1_1.fastq -2 SRR8216441.1_2.fastq --al-conc PxaW_alignedRNA_3 -S PxaW_alignment3
 hisat2 -p 40 -q -x PxaW_index -1 SRR8858150.1_1.fastq -2 SRR8858150.1_2.fastq --al-conc PxaW_alignedRNA_4 -S PxaW_alignment4
-```
+hisat2 -p 40 -q -x PxaW_index -1 SRR8863763.1_1.fastq -2 SRR8863763.1_2.fastq --al-conc Pxa2_alignedRNA_5 -S PxaW_alignment5```
 
 Replace spaces in sequence headers with underscore
 ```ShellSession
@@ -27,6 +27,8 @@ cat PxaW_alignedRNA_3.1 | perl -lane 's/\s/_/g; print;' > PxaW_alignedRNA_3.1_V2
 cat PxaW_alignedRNA_3.2 | perl -lane 's/\s/_/g; print;' > PxaW_alignedRNA_3.2_V2.fastq
 cat PxaW_alignedRNA_4.1 | perl -lane 's/\s/_/g; print;' > PxaW_alignedRNA_4.1_V2.fastq
 cat PxaW_alignedRNA_4.2 | perl -lane 's/\s/_/g; print;' > PxaW_alignedRNA_4.2_V2.fastq
+cat PxaW_alignedRNA_5.1 | perl -lane 's/\s/_/g; print;' > PxaW_alignedRNA_5.1_V2.fastq
+cat PxaW_alignedRNA_5.2 | perl -lane 's/\s/_/g; print;' > PxaW_alignedRNA_5.2_V2.fastq
 ```
 
 Run Trinity
@@ -35,7 +37,7 @@ export PATH=/programs/jellyfish-2.2.7/bin:/programs/salmon-1.0.0/bin:$PATH
 export TRINITY_HOME=/programs/trinityrnaseq-v2.10.0/
 export LD_LIBRARY_PATH=/usr/local/gcc-7.3.0/lib64:/usr/local/gcc-7.3.0/lib 
 screen
-$TRINITY_HOME/Trinity --seqType fq --left PxaW_alignedRNA_1.1_V2.fastq,PxaW_alignedRNA_2.1_V2.fastq,PxaW_alignedRNA_3.1_V2.fastq,PxaW_alignedRNA_4.1_V2.fastq --right PxaW_alignedRNA_1.2_V2.fastq,PxaW_alignedRNA_2.2_V2.fastq,PxaW_alignedRNA_3.2_V2.fastq,PxaW_alignedRNA_4.2_V2.fastq --SS_lib_type RF --max_memory 160G --no_salmon --trimmomatic --CPU 64 --output ./trinity_out >& trinity.log &
+$TRINITY_HOME/Trinity --seqType fq --left PxaW_alignedRNA_1.1_V2.fastq,PxaW_alignedRNA_2.1_V2.fastq,PxaW_alignedRNA_3.1_V2.fastq,PxaW_alignedRNA_4.1_V2.fastq,PxaW_alignedRNA_5.1_V2.fastq --right PxaW_alignedRNA_1.2_V2.fastq,PxaW_alignedRNA_2.2_V2.fastq,PxaW_alignedRNA_3.2_V2.fastq,PxaW_alignedRNA_4.2_V2.fastq,PxaW_alignedRNA_5.2_V2.fastq --SS_lib_type RF --max_memory 160G --no_salmon --trimmomatic --CPU 64 --output ./trinity_out >& trinity.log &
 ```
 
 The output file "Trinity.fasta" is to be supplied to "est=" in the MAKER control file.

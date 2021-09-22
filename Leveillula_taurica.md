@@ -96,6 +96,7 @@ augustus_species= #Remove
 snaphmm=/workdir/nv232/Lta1.hmm
 est2genome=0
 keep_preds=1 # keep genes even without evidence support, set to 0 if no
+min_contig=500
 TMP=/workdir/tmp
 ```
 

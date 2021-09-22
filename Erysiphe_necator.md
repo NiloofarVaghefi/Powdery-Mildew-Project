@@ -1,4 +1,4 @@
-## MAKER annotaion for Erysiphe necator genome 
+## MAKER annotation for Erysiphe necator genome 
 
 #### Build a transcriptome assembly
 

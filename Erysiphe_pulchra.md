@@ -11,7 +11,7 @@ File get_SRR_data.sh was created to include
    fasterq-dump $1
 ```
 
-Fasterq-dump will pull the data, one by one for all accession numbers in your list, and turn each into a fastq at the same time. By default ,it will create paired end files if available.
+Fasterq-dump will pull the data, one by one for all accession numbers in your list, and turn each into a fastq at the same time. By default, it will create paired end files if available.
 
 ```ShellSession
 cat SRR_Acc_List5_Epu.txt | xargs -n 1 bash get_SRR_data.sh

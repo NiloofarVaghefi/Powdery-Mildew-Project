@@ -16,8 +16,10 @@ hisat2 -p 40 -q -x PxaW_index -1 SRR8216440.1_1.fastq -2 SRR8216440.1_2.fastq --
 hisat2 -p 40 -q -x PxaW_index -1 SRR8216441.1_1.fastq -2 SRR8216441.1_2.fastq --al-conc PxaW_alignedRNA_3 -S PxaW_alignment3
 hisat2 -p 40 -q -x PxaW_index -1 SRR8858150.1_1.fastq -2 SRR8858150.1_2.fastq --al-conc PxaW_alignedRNA_4 -S PxaW_alignment4
 hisat2 -p 40 -q -x PxaW_index -1 SRR8863763.1_1.fastq -2 SRR8863763.1_2.fastq --al-conc Pxa2_alignedRNA_5 -S PxaW_alignment5```
+```
 
 Replace spaces in sequence headers with underscore
+
 ```ShellSession
 cat PxaW_alignedRNA_1.1 | perl -lane 's/\s/_/g; print;' > PxaW_alignedRNA_1.1_V2.fastq
 cat PxaW_alignedRNA_1.2 | perl -lane 's/\s/_/g; print;' > PxaW_alignedRNA_1.2_V2.fastq
